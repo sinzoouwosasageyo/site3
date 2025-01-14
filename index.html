@@ -74,12 +74,23 @@
           <li><a href="#"><i class="xi-instagram xi-2x"></i></a></li>
           <li><a href="#"><i class="xi-facebook-official xi-2x"></i></a></li>
           <li><a href="#"><i class="xi-naver-square xi-2x"></i></a></li>
-          <li><a href="#"><i class="xi-search xi-2x"></i></a></li>
+          <li><a onclick="open_search();" class="open_search"><i class="xi-search xi-2x"></i>
+            <span>검색하기</span></a></li>
         </ul>
       </div><!--end:#sns-->
 
     </div><!--end:.inner-->
   </header>
+
+  <aside id="search">
+    <div class="inner">
+      <form>
+        <input type="text" placeholder="search..">
+        <p>검색을 할땐 엔터를 누르고, 닫으려면 ESC키를 누르거나 X를 눌러주세요.</p>
+      </form>
+    </div>
+    <a onclick="close_search();" class="close_search"><i class="xi-close"></i></a>
+  </aside><!--end:#seaarch-->
 
   <main>
     <section id="main_visual">

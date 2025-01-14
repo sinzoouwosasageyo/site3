@@ -25,11 +25,45 @@ var main_visual = new Swiper("#main_visual",{
 var press = new Swiper("#press .inner",{
   wrapperClass:"slider",
   slideClass:"item",
-  slidesPerView: 5,
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    //화면의 너비가 320 이상 적용 옵션
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    //화면의 너비가 640 이상 적용 옵션
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    //화면의 너비가 768 이상 적용 옵션
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    //화면의 너비가 1024 이상 적용 옵션
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+  },
   pagination: {
     el: '.dot',
     clickable: true,
     bulletActiveClass:"active",
   },
 });
+
+
+//상품검색영역 스크립트
+var search = document.getElementById("search");
+
+function open_search(){
+  search.classList.add("show");
+}
+
+function close_search(){
+  search.classList.remove("show");
+}
